@@ -1,0 +1,40 @@
+{
+  "id": "wdl7ty03vi",
+  "name": {
+    "tr": "Sorular",
+    "en": "Questions",
+    "ar": "الأسئلة"
+  },
+  "description": {
+    "tr": "Okurların en çok sorduğu dört şey.",
+    "en": "Four things readers ask most.",
+    "ar": "أكثر أربعة أشياء يسألها القراء."
+  },
+  "keyword": {
+    "tr": "sss, soru cevap",
+    "en": "faq, questions",
+    "ar": "أسئلة وأجوبة"
+  },
+  "path": "sorular",
+  "icon": "help",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "25cd44",
+      "0wsbwu"
+    ],
+    "footer": []
+  },
+  "index": 2,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Sorular",
+    "en": "Questions",
+    "ar": "الأسئلة"
+  },
+  "date": "2026-11-16T22:52:08.279Z",
+  "update": "2026-11-16T22:54:57.173Z"
+}

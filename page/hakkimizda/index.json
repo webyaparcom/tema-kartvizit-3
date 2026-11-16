@@ -1,0 +1,47 @@
+{
+  "name": {
+    "tr": "Defter",
+    "en": "Notebook",
+    "ar": "الدفتر"
+  },
+  "status": "play",
+  "category": "",
+  "id": "hakkimizda",
+  "url": "",
+  "path": "hakkimizda",
+  "index": 1,
+  "icon": "photo_library",
+  "desing": {
+    "header": [],
+    "body": [
+      "z5o021",
+      "0wsbwu"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "Yazıların çıktığı yerlerden kareler; görseller temsilîdir.",
+    "en": "Frames from where the columns begin; images are representative.",
+    "ar": "صور من الأماكن التي تولد فيها المقالات؛ الصور تمثيلية."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Defter",
+    "en": "Notebook",
+    "ar": "الدفتر"
+  },
+  "keyword": {
+    "tr": "fotoğraf, şehir notları",
+    "en": "photos, city notes",
+    "ar": "صور، ملاحظات المدينة"
+  },
+  "text": {},
+  "update": "2026-11-16T22:54:57.167Z",
+  "date": "2026-10-30"
+}

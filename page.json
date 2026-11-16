@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": "aq1u5ig95k",
+      "name": {
+        "tr": "Atölyeler",
+        "en": "Workshops",
+        "ar": "الورش"
+      },
+      "description": {
+        "tr": "Deneme atölyesi, okul konuşması ve kitap kulübü (kurgusal).",
+        "en": "Essay workshop, school talk and book club (fictional).",
+        "ar": "ورشة المقالة ومحاضرة مدرسية ونادي الكتاب (افتراضي)."
+      },
+      "path": "hizmetler",
+      "icon": "edit_note",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "htppba",
+          "0wsbwu"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Defter",
+        "en": "Notebook",
+        "ar": "الدفتر"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "photo_library",
+      "desing": {
+        "header": [],
+        "body": [
+          "z5o021",
+          "0wsbwu"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Yazıların çıktığı yerlerden kareler; görseller temsilîdir.",
+        "en": "Frames from where the columns begin; images are representative.",
+        "ar": "صور من الأماكن التي تولد فيها المقالات؛ الصور تمثيلية."
+      }
+    },
+    {
+      "id": "wdl7ty03vi",
+      "name": {
+        "tr": "Sorular",
+        "en": "Questions",
+        "ar": "الأسئلة"
+      },
+      "description": {
+        "tr": "Okurların en çok sorduğu dört şey.",
+        "en": "Four things readers ask most.",
+        "ar": "أكثر أربعة أشياء يسألها القراء."
+      },
+      "path": "sorular",
+      "icon": "help",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "25cd44",
+          "0wsbwu"
+        ],
+        "footer": []
+      },
+      "index": 2
+    },
+    {
+      "name": {
+        "tr": "İletişim",
+        "en": "Contact",
+        "ar": "تواصل"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 3,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "t6nskl"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Kartvizit: telefon, WhatsApp, e-posta ve saatler.",
+        "en": "Business card: phone, WhatsApp, e-mail and hours.",
+        "ar": "بطاقة العمل: الهاتف وواتساب والبريد والساعات."
+      }
+    }
+  ],
+  "desc": []
+}

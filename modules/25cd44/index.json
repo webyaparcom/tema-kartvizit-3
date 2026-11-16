@@ -1,0 +1,54 @@
+{
+  "name": "SSS Terminal — komut satırı penceresinde soru-cevap",
+  "description": "Sorular bir terminal penceresinde: üstte üç ışıklı pencere çubuğu, her soru «$» istemli bir komut satırı, açılınca cevap «>» önekli çıktı olarak kademeli yazılır; en altta yanıp sönen imleç. Yerel <details> (tek açık, ilk açık), eş aralıklı yazı. sss-dev-soru koyu zeminde dev serif tipografi, sss-cerceve brütal kutular kullanır; bu modül geliştirici arayüzü metaforu — pencere çerçevesi + komut istemi + çıktı bloğu + imleç, eş aralıklı yazı ve basamaklı (steps) açılma. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Açılırlar yerel <details> (JS'siz). Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "terminal",
+  "category": "faq",
+  "subCategory": "terminal",
+  "tags": [
+    "faq",
+    "terminal",
+    "monospace",
+    "details",
+    "dark",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "tekAcik": "",
+    "ilkAcik": "",
+    "cta_ad": "",
+    "cta_url": "",
+    "bg": "var(--mx-site-text, #111318)",
+    "text": "var(--mx-site-bg, #ffffff)",
+    "muted": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 78%, var(--mx-site-text, #111318))",
+    "kartBg": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 7%, transparent)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 18%, transparent)",
+    "accent": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 55%, var(--mx-site-bg, #ffffff))",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 45%, var(--mx-site-bg, #ffffff))",
+    "accentText": "var(--mx-site-text, #111318)",
+    "vurguBg": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 55%, var(--mx-site-bg, #ffffff))",
+    "vurguText": "var(--mx-site-text, #111318)",
+    "bgcolor": "var(--mx-site-text, #111318)",
+    "color": "var(--mx-site-bg, #ffffff)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "data",
+    "alanlar": {
+      "soru": "dil sözlüğü (zorunlu; eski `question`)",
+      "cevap": "dil sözlüğü (eski `answer`)",
+      "kategori": "grup adı, dil sözlüğü (gruplayan yerleşimde)",
+      "ikon": "Material Symbols adı (destekleyen yerleşimde)",
+      "url": "«Devamı» bağlantısı (iç slug ya da tam URL)"
+    }
+  }
+}

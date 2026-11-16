@@ -1,0 +1,165 @@
+<header class="modulex-ust-pasparto{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-ust-pasparto-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</header>
+
+<style>
+  /* ust-pasparto — Menü yalnız üst şeridi değil sayfanın tamamını biçimlendirir: sabit kenar çerçevesi galeri/sergi duvarı hissi verir, düğme çerçeveye asılı etiket — kenardan kenara çubuklardan farklı. */
+  .modulex-ust-pasparto { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-ust-pasparto *, .modulex-ust-pasparto *::before, .modulex-ust-pasparto *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-ust-pasparto :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-ust-pasparto :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-ust-pasparto :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-ust-pasparto :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-ust-pasparto img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-ust-pasparto) img { height: auto; }
+  .modulex-ust-pasparto [hidden] { display: none !important; }
+  .modulex-ust-pasparto :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-ust-pasparto :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-ust-pasparto-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-ust-pasparto-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-ust-pasparto--bassiz .modulex-ust-pasparto-bas { display: none; }
+  .modulex-ust-pasparto-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-ust-pasparto-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-ust-pasparto-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-ust-pasparto-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-ust-pasparto-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-ust-pasparto-dugme:hover { transform: translateY(-2px); }
+  .modulex-ust-pasparto-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-ust-pasparto-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-ust-pasparto-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-ust-pasparto { position: relative; z-index: 900; }
+  .modulex-ust-pasparto-logo { display: inline-flex; flex: 0 1 auto; min-width: 0; align-items: center; color: inherit; text-decoration: none; }
+  /* dar ekranda geniş logo/uzun ad çubuğu taşırmasın: logo daralır (img max-width 100%), ad sarar */
+  .modulex-ust-pasparto-logo img { width: auto; max-height: --logoH--; }
+  .modulex-ust-pasparto-ad { font-family: var(--mx-font-heading, inherit); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .modulex-ust-pasparto-oge { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: inherit; font-weight: 600; text-decoration: none; transition: color 0.2s ease, background 0.2s ease; }
+  .modulex-ust-pasparto-oge:hover, .modulex-ust-pasparto-oge[aria-current="page"] { color: --accentInk--; }
+  .modulex-ust-pasparto-cta { display: inline-flex; flex: none; align-items: center; gap: 6px; min-height: 44px; padding: 8px 18px; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; white-space: nowrap; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .modulex-ust-pasparto-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -12px --accent--; }
+  .modulex-ust-pasparto-cta .material-symbols-outlined, .modulex-ust-pasparto-tel .material-symbols-outlined, .modulex-ust-pasparto-posta .material-symbols-outlined { font-size: 18px; }
+  .modulex-ust-pasparto-tel, .modulex-ust-pasparto-posta { display: inline-flex; align-items: center; gap: 6px; color: inherit; text-decoration: none; white-space: nowrap; }
+  .modulex-ust-pasparto-tel:hover, .modulex-ust-pasparto-posta:hover { color: --accentInk--; }
+  .modulex-ust-pasparto-dil:empty { display: none; }
+  .modulex-ust-pasparto-ac { display: none; align-items: center; gap: 10px; min-width: 46px; min-height: 46px; padding: 0 12px; border: 1px solid --cizgi--; border-radius: 999px; background: transparent; color: inherit; font: inherit; font-weight: 700; }
+  .modulex-ust-pasparto-ac-ikon { display: grid; gap: 4px; width: 20px; }
+  .modulex-ust-pasparto-ac-ikon span { display: block; height: 2px; border-radius: 2px; background: currentColor; transition: transform 0.3s ease, opacity 0.3s ease; }
+  .modulex-ust-pasparto--acik .modulex-ust-pasparto-ac-ikon span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .modulex-ust-pasparto--acik .modulex-ust-pasparto-ac-ikon span:nth-child(2) { opacity: 0; }
+  .modulex-ust-pasparto--acik .modulex-ust-pasparto-ac-ikon span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .modulex-ust-pasparto-kapat { display: inline-grid; place-items: center; width: 46px; height: 46px; border: 1px solid --cizgi--; border-radius: 50%; background: transparent; color: inherit; }
+  .modulex-ust-pasparto-perde { position: fixed; inset: 0; z-index: 1; background: color-mix(in srgb, --text-- 45%, transparent); animation: modulex-ust-pasparto-sol 0.3s ease both; }
+  @keyframes modulex-ust-pasparto-sol { from { opacity: 0; } to { opacity: 1; } }
+
+  .modulex-ust-pasparto-panel { display: grid; gap: 14px; }
+  @media (max-width: 1024px) {
+    .modulex-ust-pasparto--js .modulex-ust-pasparto-nav, .modulex-ust-pasparto--js .modulex-ust-pasparto-genis { display: none; }
+    .modulex-ust-pasparto--js .modulex-ust-pasparto-ac { display: inline-flex; }
+    .modulex-ust-pasparto-panel { position: absolute; inset-inline: 0; inset-block-start: 100%; padding: 16px 20px 24px; border-block-end: 1px solid --cizgi--; background: --bg--; box-shadow: 0 24px 40px -28px color-mix(in srgb, --text-- 55%, transparent); animation: modulex-ust-pasparto-in 0.3s ease both; }
+    .modulex-ust-pasparto-pliste { display: grid; }
+    .modulex-ust-pasparto-pliste .modulex-ust-pasparto-oge { width: 100%; min-height: 50px; border-block-end: 1px solid --cizgi--; font-size: 1.05rem; }
+    .modulex-ust-pasparto-palt { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+  }
+  @media (min-width: 1025px) {
+    .modulex-ust-pasparto-panel { display: none !important; }
+  }
+  @keyframes modulex-ust-pasparto-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+  /* site CSS'i body'ye width: 100% verir → çerçeve dolgusu kutunun içinde (border-box), yatay taşma yok */
+  body:has(.modulex-ust-pasparto) { --pkal: clamp(8px, 1.1vw, 16px); box-sizing: border-box; padding: var(--pkal); }
+  .modulex-ust-pasparto-cerceve { position: fixed; inset: 0; z-index: 940; border: var(--pkal, 12px) solid --text--; pointer-events: none; animation: modulex-ust-pasparto-cer 0.6s ease both; }
+  .modulex-ust-pasparto-cerceve::before { content: ""; position: absolute; inset: 6px; border: 1px solid color-mix(in srgb, --accent-- 55%, transparent); }
+  @keyframes modulex-ust-pasparto-cer { from { opacity: 0; } to { opacity: 1; } }
+  .modulex-ust-pasparto-pano { display: flex; align-items: center; gap: 14px 30px; min-height: 78px; }
+  .modulex-ust-pasparto-pano > .modulex-ust-pasparto-nav { flex: 1 1 auto; }
+  .modulex-ust-pasparto-fliste { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 34px; }
+  .modulex-ust-pasparto-foge { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.16em; text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
+  .modulex-ust-pasparto-foge::before, .modulex-ust-pasparto-foge::after { content: ""; position: absolute; inset-block: 12px; width: 1px; background-color: currentColor; opacity: 0; transition: opacity 0.25s ease, transform 0.3s ease; }
+  .modulex-ust-pasparto-foge::before { inset-inline-start: -12px; transform: translateY(6px); }
+  .modulex-ust-pasparto-foge::after { inset-inline-end: -12px; transform: translateY(-6px); }
+  .modulex-ust-pasparto-foge:hover::before, .modulex-ust-pasparto-foge:hover::after, .modulex-ust-pasparto-foge[aria-current="page"]::before, .modulex-ust-pasparto-foge[aria-current="page"]::after { opacity: 1; transform: none; }
+  .modulex-ust-pasparto-foge:hover { color: --accentInk--; }
+  .modulex-ust-pasparto-genis { display: flex; align-self: stretch; align-items: flex-start; gap: 16px; }
+  .modulex-ust-pasparto-genis > .modulex-ust-pasparto-dil { align-self: center; }
+  .modulex-ust-pasparto-asili { padding: 0 14px 6px; border-end-start-radius: 16px; border-end-end-radius: 16px; background-color: --text--; color: --bg--; box-shadow: 0 16px 26px -18px color-mix(in srgb, --text-- 70%, transparent); animation: modulex-ust-pasparto-sark 0.5s cubic-bezier(0.2, 0.8, 0.2, 1.3) 0.15s both; }
+  @keyframes modulex-ust-pasparto-sark { from { transform: translateY(-100%); } to { transform: none; } }
+  .modulex-ust-pasparto-asili .modulex-ust-pasparto-cta { min-height: 54px; padding-inline: 6px; border-radius: 0; background-color: transparent; color: --bg--; box-shadow: none; }
+  .modulex-ust-pasparto-asili .modulex-ust-pasparto-cta:hover { box-shadow: none; transform: translateY(3px); }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ust-pasparto-foge { letter-spacing: 0; }
+  @media (max-width: 1024px) {
+    .modulex-ust-pasparto-pano { justify-content: space-between; min-height: 64px; }
+    .modulex-ust-pasparto:not(.modulex-ust-pasparto--js) .modulex-ust-pasparto-pano { flex-wrap: wrap; }
+    .modulex-ust-pasparto:not(.modulex-ust-pasparto--js) .modulex-ust-pasparto-pano > .modulex-ust-pasparto-nav { order: 3; flex-basis: 100%; }
+  }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ust-pasparto :is(.modulex-ust-pasparto-baslik, .modulex-ust-pasparto-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ust-pasparto-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-ust-pasparto { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-ust-pasparto *, .modulex-ust-pasparto *::before, .modulex-ust-pasparto *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-ust-pasparto";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const cekmece = (s, P) => {
+          const ac = s.querySelector("." + P + "-ac");
+          const panel = ac ? document.getElementById(ac.getAttribute("aria-controls")) : null;
+          if (!ac || !panel) return;
+          s.classList.add(P + "--js");
+          const perde = s.querySelector("." + P + "-perde");
+          const modal = panel.getAttribute("aria-modal") === "true";
+          const kok = document.documentElement;
+          const kapa = (odak) => {
+            if (panel.hidden) return;
+            panel.hidden = true;
+            if (perde) perde.hidden = true;
+            ac.setAttribute("aria-expanded", "false");
+            s.classList.remove(P + "--acik");
+            if (modal) kok.style.overflow = "";
+            if (odak) ac.focus();
+          };
+          const aci = () => {
+            panel.hidden = false;
+            if (perde) perde.hidden = false;
+            ac.setAttribute("aria-expanded", "true");
+            s.classList.add(P + "--acik");
+            if (modal) kok.style.overflow = "hidden";
+            const ilk = panel.querySelector("a[href], button");
+            if (ilk) ilk.focus();
+          };
+          ac.addEventListener("click", () => (panel.hidden ? aci() : kapa(true)));
+          panel.addEventListener("click", (e) => {
+            if (e.target.closest("." + P + "-kapat")) kapa(true);
+            else if (e.target.closest("a[href]")) kapa(false);
+          });
+          if (perde) perde.addEventListener("click", () => kapa(true));
+          document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !panel.hidden) kapa(true); });
+          if (modal) {
+            panel.addEventListener("keydown", (e) => {
+              if (e.key !== "Tab") return;
+              const o = [...panel.querySelectorAll("a[href], button:not([disabled])")].filter((x) => x.offsetParent !== null);
+              if (!o.length) return;
+              if (e.shiftKey && document.activeElement === o[0]) { e.preventDefault(); o[o.length - 1].focus(); }
+              else if (!e.shiftKey && document.activeElement === o[o.length - 1]) { e.preventDefault(); o[0].focus(); }
+            });
+          }
+          const g = Number(ac.dataset.genis);
+          if (g && window.matchMedia) window.matchMedia(`(min-width: ${g}px)`).addEventListener("change", (m) => { if (m.matches) kapa(false); });
+        };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      cekmece(s, P, az);
+    });
+  })();
+</script>

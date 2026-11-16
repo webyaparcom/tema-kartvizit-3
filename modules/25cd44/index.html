@@ -1,0 +1,80 @@
+<section class="modulex-sss-terminal{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-sss-terminal-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* sss-terminal — sss-dev-soru koyu zeminde dev serif tipografi, sss-cerceve brütal kutular kullanır; bu modül geliştirici arayüzü metaforu — pencere çerçevesi + komut istemi + çıktı bloğu + imleç, eş aralıklı yazı ve basamaklı (steps) açılma. */
+  .modulex-sss-terminal { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-sss-terminal *, .modulex-sss-terminal *::before, .modulex-sss-terminal *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-sss-terminal :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-sss-terminal :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-sss-terminal :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-sss-terminal :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-sss-terminal img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-sss-terminal) img { height: auto; }
+  .modulex-sss-terminal [hidden] { display: none !important; }
+  .modulex-sss-terminal :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-sss-terminal :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-sss-terminal-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-sss-terminal-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-sss-terminal--bassiz .modulex-sss-terminal-bas { display: none; }
+  .modulex-sss-terminal-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-sss-terminal-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-sss-terminal-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-sss-terminal-bas { max-width: 780px; margin-inline: auto; text-align: center; justify-items: center; }
+  .modulex-sss-terminal-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-sss-terminal-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-sss-terminal-dugme:hover { transform: translateY(-2px); }
+  .modulex-sss-terminal-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-sss-terminal-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-sss-terminal-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-sss-terminal { --yon: 1; }
+  :is([dir="rtl"]) .modulex-sss-terminal { --yon: -1; }
+  .modulex-sss-terminal-pencere { max-width: 980px; margin-inline: auto; overflow: hidden; border: 1px solid --cizgi--; border-radius: 14px; background-color: color-mix(in srgb, --text-- 6%, --bg--); box-shadow: 0 30px 60px -36px rgba(0, 0, 0, 0.7); font-family: var(--mx-font-mono, ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace); }
+  .modulex-sss-terminal-cubuk { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-block-end: 1px solid --cizgi--; background-color: color-mix(in srgb, --text-- 11%, --bg--); }
+  .modulex-sss-terminal-isik { flex: none; width: 12px; height: 12px; border-radius: 50%; background-color: --muted--; opacity: 0.5; }
+  .modulex-sss-terminal-isik:first-child { background-color: --accent--; opacity: 1; }
+  .modulex-sss-terminal-cad { flex: 1 1 auto; padding-inline-end: 44px; color: --muted--; font-size: 0.82rem; text-align: center; }
+  .modulex-sss-terminal-ekran { display: grid; gap: 4px; padding: clamp(16px, 3vw, 28px); font-size: 0.98rem; }
+  .modulex-sss-terminal-komut { border-radius: 8px; transition: background-color 0.2s ease; }
+  .modulex-sss-terminal-komut[open] { background-color: color-mix(in srgb, --accent-- 9%, transparent); }
+  .modulex-sss-terminal-satir { display: flex; align-items: baseline; gap: 12px; padding: 10px 12px; list-style: none; line-height: 1.5; }
+  .modulex-sss-terminal-satir::-webkit-details-marker { display: none; }
+  .modulex-sss-terminal-satir:hover .modulex-sss-terminal-gir { text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-sss-terminal-istem { flex: none; color: --accentInk--; font-weight: 800; }
+  .modulex-sss-terminal-gir { flex: 1 1 auto; min-width: 0; font-weight: 700; }
+  .modulex-sss-terminal-durum { flex: none; align-self: center; color: --muted--; font-size: 20px; transform: rotate(calc(var(--yon) * -90deg)); transition: transform 0.25s ease, color 0.25s ease; }
+  .modulex-sss-terminal-komut[open] .modulex-sss-terminal-durum { color: --accentInk--; transform: none; }
+  .modulex-sss-terminal-cikti { display: grid; gap: 8px; margin-inline-start: 17px; padding-block: 2px 14px; padding-inline: 18px 12px; border-inline-start: 2px solid --accent--; animation: modulex-sss-terminal-yaz 0.4s steps(8, end) both; }
+  .modulex-sss-terminal-cikti .modulex-sss-terminal-cevap { color: --muted--; line-height: 1.7; }
+  .modulex-sss-terminal-cikti .modulex-sss-terminal-cevap::before { content: "> "; color: --accentInk--; font-weight: 800; }
+  .modulex-sss-terminal-imlec { display: flex; align-items: center; gap: 12px; padding: 10px 12px; }
+  .modulex-sss-terminal-yanip { width: 0.6em; height: 1.15em; background-color: --accentInk--; animation: modulex-sss-terminal-yanip 1.1s steps(1, end) infinite; }
+  @keyframes modulex-sss-terminal-yaz { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+  @keyframes modulex-sss-terminal-yanip { 50% { opacity: 0; } }
+  @media (max-width: 768px) {
+    .modulex-sss-terminal-ekran { padding: 12px 6px; font-size: 0.92rem; }
+    .modulex-sss-terminal-satir { gap: 8px; padding: 10px 8px; }
+    .modulex-sss-terminal-cikti { margin-inline-start: 10px; padding-inline: 12px 8px; }
+    .modulex-sss-terminal-cad { padding-inline-end: 0; font-size: 0.74rem; }
+  }
+  .modulex-sss-terminal-bag { display: inline-flex; align-items: center; gap: 6px; margin-block-start: 10px; color: --accentInk--; font-weight: 700; text-decoration: none; transition: gap 0.25s ease; }
+  .modulex-sss-terminal-bag:hover { gap: 10px; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-sss-terminal-bag .material-symbols-outlined { font-size: 18px; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-sss-terminal :is(.modulex-sss-terminal-baslik, .modulex-sss-terminal-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-sss-terminal-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-sss-terminal { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-sss-terminal *, .modulex-sss-terminal *::before, .modulex-sss-terminal *::after { animation: none !important; transition: none !important; }
+  }
+</style>

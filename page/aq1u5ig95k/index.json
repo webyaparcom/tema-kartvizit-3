@@ -1,0 +1,40 @@
+{
+  "id": "aq1u5ig95k",
+  "name": {
+    "tr": "Atölyeler",
+    "en": "Workshops",
+    "ar": "الورش"
+  },
+  "description": {
+    "tr": "Deneme atölyesi, okul konuşması ve kitap kulübü (kurgusal).",
+    "en": "Essay workshop, school talk and book club (fictional).",
+    "ar": "ورشة المقالة ومحاضرة مدرسية ونادي الكتاب (افتراضي)."
+  },
+  "keyword": {
+    "tr": "yazı atölyesi, konuşma",
+    "en": "writing workshop, talk",
+    "ar": "ورشة كتابة، محاضرة"
+  },
+  "path": "hizmetler",
+  "icon": "edit_note",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "htppba",
+      "0wsbwu"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Atölyeler",
+    "en": "Workshops",
+    "ar": "الورش"
+  },
+  "date": "2026-11-16T22:52:08.236Z",
+  "update": "2026-11-16T22:54:57.154Z"
+}
