@@ -4,12 +4,16 @@
   "description": {
     "tr": "Leyla Çınar’ın kişisel sitesi: haftalık köşe yazıları, deneme atölyeleri ve konuşmalar. Kurgusal demo; görseller temsilîdir.",
     "en": "The personal site of Leyla Cinar: weekly columns, essay workshops and talks. Fictional demo; images are representative.",
-    "ar": "الموقع الشخصي لليلى تشينار: مقالات أسبوعية وورش كتابة المقالة ومحاضرات. عرض تجريبي افتراضي والصور تمثيلية."
+    "ar": "الموقع الشخصي لليلى تشينار: مقالات أسبوعية وورش كتابة المقالة ومحاضرات. عرض تجريبي افتراضي والصور تمثيلية.",
+    "de": "Persönliche Website von Leyla Çınar: wöchentliche Kolumnen, Essay-Workshops und Vorträge. Fiktive Demo; die Bilder sind symbolisch.",
+    "ru": "Персональный сайт Leyla Çınar: еженедельные колонки, мастерские эссе и выступления. Вымышленное демо; изображения условные."
   },
   "keyword": {
     "tr": "köşe yazarı, deneme, yazı atölyesi, konuşmacı, kişisel site",
     "en": "columnist, essay, writing workshop, speaker, personal site",
-    "ar": "كاتبة عمود، مقالة، ورشة كتابة، متحدثة، موقع شخصي"
+    "ar": "كاتبة عمود، مقالة، ورشة كتابة، متحدثة، موقع شخصي",
+    "de": "Kolumnist, Essay, Schreibwerkstatt, Redner, persönliche Website",
+    "ru": "колумнист, эссе, писательская мастерская, спикер, личный сайт"
   },
   "category": "Kurumsal",
   "name": "Leyla Çınar",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,

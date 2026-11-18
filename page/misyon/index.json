@@ -3,17 +3,23 @@
   "name": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "description": {
     "tr": "Misyonumuz",
     "en": "Our mission",
-    "ar": "مهمتنا"
+    "ar": "مهمتنا",
+    "de": "Unsere Mission",
+    "ru": "Наша миссия"
   },
   "keyword": {
     "tr": "Misyon",
     "en": "mission, our mission, corporate responsibility",
-    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية"
+    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "path": "misyon",
   "icon": "flag",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Misyonumuz</h2>\n<p>Şehrin küçük hikâyelerini sade, dürüst ve okunur bir dille yazmak.</p>",
     "en": "<h2>Our mission</h2>\n<p>To write the small stories of the city in plain, honest and readable language.</p>",
-    "ar": "<h2>مهمتنا</h2>\n<p>أن أكتب حكايات المدينة الصغيرة بلغة بسيطة وصادقة وسهلة القراءة.</p>"
+    "ar": "<h2>مهمتنا</h2>\n<p>أن أكتب حكايات المدينة الصغيرة بلغة بسيطة وصادقة وسهلة القراءة.</p>",
+    "de": "<h2>Unsere Mission</h2>\n<p>Die kleinen Geschichten der Stadt in einer schlichten, ehrlichen und lesbaren Sprache zu schreiben.</p>",
+    "ru": "<h2>Наша миссия</h2>\n<p>Писать маленькие истории города простым, честным и читаемым языком.</p>"
   },
   "title": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "date": "2026-11-16T22:52:07.821Z",
   "update": "2026-11-16T22:54:57.202Z",
