@@ -3,17 +3,23 @@
   "name": {
     "tr": "Sorular",
     "en": "Questions",
-    "ar": "الأسئلة"
+    "ar": "الأسئلة",
+    "de": "FAQ",
+    "ru": "FAQ"
   },
   "description": {
     "tr": "Okurların en çok sorduğu dört şey.",
     "en": "Four things readers ask most.",
-    "ar": "أكثر أربعة أشياء يسألها القراء."
+    "ar": "أكثر أربعة أشياء يسألها القراء.",
+    "de": "Die vier häufigsten Fragen der Leser.",
+    "ru": "Четыре самых частых вопроса читателей."
   },
   "keyword": {
     "tr": "sss, soru cevap",
     "en": "faq, questions",
-    "ar": "أسئلة وأجوبة"
+    "ar": "أسئلة وأجوبة",
+    "de": "FAQ, Fragen und Antworten",
+    "ru": "FAQ, вопросы и ответы"
   },
   "path": "sorular",
   "icon": "help",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Sorular",
     "en": "Questions",
-    "ar": "الأسئلة"
+    "ar": "الأسئلة",
+    "de": "FAQ",
+    "ru": "FAQ"
   },
   "date": "2026-11-16T22:52:08.279Z",
   "update": "2026-11-16T22:54:57.173Z"

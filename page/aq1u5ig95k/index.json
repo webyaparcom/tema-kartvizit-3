@@ -3,17 +3,23 @@
   "name": {
     "tr": "Atölyeler",
     "en": "Workshops",
-    "ar": "الورش"
+    "ar": "الورش",
+    "de": "Workshops",
+    "ru": "Мастер-классы"
   },
   "description": {
     "tr": "Deneme atölyesi, okul konuşması ve kitap kulübü (kurgusal).",
     "en": "Essay workshop, school talk and book club (fictional).",
-    "ar": "ورشة المقالة ومحاضرة مدرسية ونادي الكتاب (افتراضي)."
+    "ar": "ورشة المقالة ومحاضرة مدرسية ونادي الكتاب (افتراضي).",
+    "de": "Essay-Workshop, Schulvortrag und Buchclub (fiktional).",
+    "ru": "Воркшоп по эссе, школьная лекция и книжный клуб (вымышленные)."
   },
   "keyword": {
     "tr": "yazı atölyesi, konuşma",
     "en": "writing workshop, talk",
-    "ar": "ورشة كتابة، محاضرة"
+    "ar": "ورشة كتابة، محاضرة",
+    "de": "Schreibwerkstatt, Vortrag",
+    "ru": "писательская мастерская, беседа"
   },
   "path": "hizmetler",
   "icon": "edit_note",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Atölyeler",
     "en": "Workshops",
-    "ar": "الورش"
+    "ar": "الورش",
+    "de": "Workshops",
+    "ru": "Мастер-классы"
   },
   "date": "2026-11-16T22:52:08.236Z",
   "update": "2026-11-16T22:54:57.154Z"

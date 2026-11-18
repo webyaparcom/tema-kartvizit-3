@@ -2,7 +2,9 @@
   "name": {
     "tr": "Defter",
     "en": "Notebook",
-    "ar": "الدفتر"
+    "ar": "الدفتر",
+    "de": "Notizbuch",
+    "ru": "Блокнот"
   },
   "status": "play",
   "category": "",
@@ -23,7 +25,9 @@
   "description": {
     "tr": "Yazıların çıktığı yerlerden kareler; görseller temsilîdir.",
     "en": "Frames from where the columns begin; images are representative.",
-    "ar": "صور من الأماكن التي تولد فيها المقالات؛ الصور تمثيلية."
+    "ar": "صور من الأماكن التي تولد فيها المقالات؛ الصور تمثيلية.",
+    "de": "Bilder von den Orten, an denen die Kolumnen entstehen; Bilder sind repräsentativ.",
+    "ru": "Кадры с мест, где рождаются колонки; изображения носят иллюстративный характер."
   },
   "spot": {
     "tr": "",
@@ -34,12 +38,16 @@
   "title": {
     "tr": "Defter",
     "en": "Notebook",
-    "ar": "الدفتر"
+    "ar": "الدفتر",
+    "de": "Notizbuch",
+    "ru": "Блокнот"
   },
   "keyword": {
     "tr": "fotoğraf, şehir notları",
     "en": "photos, city notes",
-    "ar": "صور، ملاحظات المدينة"
+    "ar": "صور، ملاحظات المدينة",
+    "de": "Fotografie, Stadtnotizen",
+    "ru": "фотография, городские заметки"
   },
   "text": {},
   "update": "2026-11-16T22:54:57.167Z",

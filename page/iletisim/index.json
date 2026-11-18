@@ -2,7 +2,9 @@
   "name": {
     "tr": "İletişim",
     "en": "Contact",
-    "ar": "تواصل"
+    "ar": "تواصل",
+    "de": "Kontakt",
+    "ru": "Контакты"
   },
   "status": "play",
   "category": "",
@@ -22,7 +24,9 @@
   "description": {
     "tr": "Kartvizit: telefon, WhatsApp, e-posta ve saatler.",
     "en": "Business card: phone, WhatsApp, e-mail and hours.",
-    "ar": "بطاقة العمل: الهاتف وواتساب والبريد والساعات."
+    "ar": "بطاقة العمل: الهاتف وواتساب والبريد والساعات.",
+    "de": "Visitenkarte: Telefon, WhatsApp, E-Mail und Zeiten.",
+    "ru": "Визитка: телефон, WhatsApp, e-mail и часы работы."
   },
   "spot": {
     "tr": "",
@@ -33,12 +37,16 @@
   "title": {
     "tr": "İletişim",
     "en": "Contact",
-    "ar": "تواصل"
+    "ar": "تواصل",
+    "de": "Kontakt",
+    "ru": "Контакты"
   },
   "keyword": {
     "tr": "iletişim",
     "en": "contact",
-    "ar": "اتصال"
+    "ar": "اتصال",
+    "de": "Kontakt",
+    "ru": "контакты"
   },
   "text": {},
   "update": "2026-11-16T22:54:57.185Z",

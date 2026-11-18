@@ -5,12 +5,16 @@
       "name": {
         "tr": "Atölyeler",
         "en": "Workshops",
-        "ar": "الورش"
+        "ar": "الورش",
+        "de": "Workshops",
+        "ru": "Мастер-классы"
       },
       "description": {
         "tr": "Deneme atölyesi, okul konuşması ve kitap kulübü (kurgusal).",
         "en": "Essay workshop, school talk and book club (fictional).",
-        "ar": "ورشة المقالة ومحاضرة مدرسية ونادي الكتاب (افتراضي)."
+        "ar": "ورشة المقالة ومحاضرة مدرسية ونادي الكتاب (افتراضي).",
+        "de": "Essay-Workshop, Schulvortrag und Buchclub (fiktional).",
+        "ru": "Воркшоп по эссе, школьная лекция и книжный клуб (вымышленные)."
       },
       "path": "hizmetler",
       "icon": "edit_note",
@@ -30,7 +34,9 @@
       "name": {
         "tr": "Defter",
         "en": "Notebook",
-        "ar": "الدفتر"
+        "ar": "الدفتر",
+        "de": "Notizbuch",
+        "ru": "Блокнот"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -51,7 +57,9 @@
       "description": {
         "tr": "Yazıların çıktığı yerlerden kareler; görseller temsilîdir.",
         "en": "Frames from where the columns begin; images are representative.",
-        "ar": "صور من الأماكن التي تولد فيها المقالات؛ الصور تمثيلية."
+        "ar": "صور من الأماكن التي تولد فيها المقالات؛ الصور تمثيلية.",
+        "de": "Bilder von den Orten, an denen die Kolumnen entstehen; Bilder sind repräsentativ.",
+        "ru": "Кадры с мест, где рождаются колонки; изображения носят иллюстративный характер."
       }
     },
     {
@@ -59,12 +67,16 @@
       "name": {
         "tr": "Sorular",
         "en": "Questions",
-        "ar": "الأسئلة"
+        "ar": "الأسئلة",
+        "de": "FAQ",
+        "ru": "FAQ"
       },
       "description": {
         "tr": "Okurların en çok sorduğu dört şey.",
         "en": "Four things readers ask most.",
-        "ar": "أكثر أربعة أشياء يسألها القراء."
+        "ar": "أكثر أربعة أشياء يسألها القراء.",
+        "de": "Die vier häufigsten Fragen der Leser.",
+        "ru": "Четыре самых частых вопроса читателей."
       },
       "path": "sorular",
       "icon": "help",
@@ -84,7 +96,9 @@
       "name": {
         "tr": "İletişim",
         "en": "Contact",
-        "ar": "تواصل"
+        "ar": "تواصل",
+        "de": "Kontakt",
+        "ru": "Контакты"
       },
       "status": "play",
       "id": "iletisim",
@@ -104,7 +118,9 @@
       "description": {
         "tr": "Kartvizit: telefon, WhatsApp, e-posta ve saatler.",
         "en": "Business card: phone, WhatsApp, e-mail and hours.",
-        "ar": "بطاقة العمل: الهاتف وواتساب والبريد والساعات."
+        "ar": "بطاقة العمل: الهاتف وواتساب والبريد والساعات.",
+        "de": "Visitenkarte: Telefon, WhatsApp, E-Mail und Zeiten.",
+        "ru": "Визитка: телефон, WhatsApp, e-mail и часы работы."
       }
     }
   ],
